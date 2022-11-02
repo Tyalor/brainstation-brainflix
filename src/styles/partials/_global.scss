@@ -1,0 +1,201 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./fonts" as *;
+
+/* Box Sizing Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: $white;
+    font-family: "Avenir", Tahoma, Verdana, sans-serif; // fall fonts
+}
+
+// h1 {
+//     font-size: $l;
+//     line-height: 2rem;
+//     font-weight: 600;
+//     margin: 0;
+//     padding: 0;
+
+//     @include tablet {
+//         font-size: $xxl;
+//         line-height: 4.25rem;
+//     }
+// }
+
+// h2 {
+//     font-size: $l;
+//     line-height: 2rem;
+//     font-weight: 600;
+//     margin: 0;
+//     padding: 0;
+
+//     @include tablet {
+//         font-size: $xl;
+//         line-height: 2.75rem;
+//     }
+// }
+
+// h3 {
+//     font-size: 1.1rem;
+//     line-height: 1.575rem;
+//     font-weight: 600;
+//     margin: 0;
+//     padding: 0;
+
+//     @include tablet {
+//         font-size: $l;
+//         line-height: 2;
+//     }
+// }
+
+// h4 {
+//     font-size: 1rem;
+//     line-height: 1rem;
+//     font-weight: 400;
+//     letter-spacing: .05rem;
+
+//     @include tablet {
+//         font-size: $m;
+//         line-height: 1.375rem;
+//     }
+// }
+
+
+// p {
+//     font-size: .94rem;
+//     line-height: 1.425rem;
+//     font-weight: 400;
+//     letter-spacing: .05rem;
+
+//     @include tablet {
+//         font-size: $m;
+//         line-height: 1.375rem;
+//     }
+// }
+
+// a {
+//     color: inherit;
+//     text-decoration-line: none;
+// }
+
+/* Text Modifiers */
+.text--brainflix-black{
+    color: $brainflix-black;
+}
+
+.text--silver {
+    color: $silver;
+}
+
+.text--white {
+    color: $white;
+}
+
+.text--brainflix-darkblack {
+    color: $brainflix-darkblack;
+}
+
+.text--mercury {
+    color: $mercury;
+}
+
+.text--albaster {
+    color: $albaster;
+}
+
+.text--normal {
+    font-style: normal;
+}
+
+.text--italic {
+    font-style: italic;
+}
+
+.text--regular {
+    font-weight: 400;
+}
+
+.text--bold {
+    font-weight: 600;
+}
+
+.text--bolder {
+    font-weight: 700;
+}
+
+
+.text--underline {
+    text-decoration: underline;
+}
+
+.text--none {
+    text-decoration: none;
+}
+
+.text--uppercase {
+    text-transform: uppercase;
+}
+
+
+// Backgrounds
+.bg--primary {
+    background: $brainflix-black;
+}
+
+.bg--silver {
+    background: $silver;
+}
+
+.bg--white {
+    background: $white;
+}
+
+.bg--secondary {
+    background: $brainflix-darkblack;
+}
+
+.bg--mercury {
+    background: $mercury;
+}
+
+.bg--albaster {
+    background: $albaster;
+}
+
+// Responsive Display Mixins
+.d-mobile {
+    display: inherit;
+
+    @include tablet {
+        display: none;
+    }
+
+}
+
+.d-tablet {
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+
+}
+
+.d-block--f {
+    display: block!important;
+}
+
+.d-flex--f {
+    display: flex!important;
+}
+
+
+.d-none--f {
+    display: none!important;
+}
+

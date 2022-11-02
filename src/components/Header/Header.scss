@@ -1,0 +1,100 @@
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+.header {
+    background: $white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    // background: red;
+    padding-bottom: 1rem;
+
+    &__nav {
+        // margin: auto;
+        // text-align: center;
+    }
+
+    &__logo-img {
+        height: 1.65rem;
+        margin: 1rem;
+    }
+
+    &__container {
+        // display: flex;
+    }
+
+    &__search {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__search-img {
+        position: absolute;
+        left: .65rem;
+    }
+
+    &__search-input {
+        margin-right: 1rem;
+        width: 100%;
+        padding: .9rem 2.1rem;
+        background: $albaster;
+        border: .1rem $mercury solid;
+        border-radius: .25rem;
+    }
+
+    &__upload-btn {
+        color: $white;
+        background: $brainflix-blue;
+        border: none;
+        outline: none;
+        display: flex;
+        font-weight: 600;
+        align-items: center;
+        padding: .05rem .5rem;
+        border-radius: .3rem;
+        position: relative;
+        min-width: 16rem;
+        max-width: 20rem;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        transition: .3s;
+        &:hover {}
+    }
+
+    &__upload-text {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: .875rem;
+        text-transform: uppercase;
+    }
+
+    &__upload-img {
+        position: absolute;
+        left: .5rem;
+    }
+
+    &__profile-img-container {
+        height: 3rem;
+        min-width: 3rem;
+        width: 100%;
+        max-width: 3rem;
+        display: block;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: $mercury;
+    }
+
+    &__profile-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 25% 100%;
+        // display: none;
+    }
+
+}
