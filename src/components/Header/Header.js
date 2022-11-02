@@ -14,7 +14,7 @@ const Header = () => {
                         <form class="header__search" action="">
                             <img class="header__search-img" src={search} alt="search" />
                             <input class="header__search-input" type="text" placeholder="Search" />
-                            <div class="header__profile-img-container">
+                            <div class="header__profile-img-container d-mobile">
                                 <img class="header__profile-img" src={userPicture} alt="" />
                             </div>
                         </form>
@@ -22,9 +22,9 @@ const Header = () => {
                             <img class="header__upload-img btn__img" src={upload} alt="upload" />
                             <p class="header__upload-text btn__text">Upload</p>
                         </button>
-                        {/* <div class="header__profile-img-container">
+                        <div class="header__profile-img-container d-tablet">
                             <img class="header__profile-img" src={userPicture} alt="" />
-                        </div> */}
+                        </div>
                     </div>                    
                 </nav>
             </header>
