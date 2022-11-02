@@ -1,0 +1,51 @@
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+.desc {
+    margin: 1rem;
+
+    &__title {
+        color: $brainflix-darkblack;
+    }
+
+    &__meta {
+        display: flex;
+        // text-align: left;
+        // align-items: flex-end;
+        justify-content: space-evenly;
+    }
+
+    &__meta-left {
+        display: flex;
+        margin-right: auto;
+        flex-direction: column;
+    }
+
+    &__meta-right {
+        display: flex;
+        margin-right: auto;
+        flex-direction: column;
+    }
+
+    &__user {
+        color: $brainflix-darkblack;
+    }
+
+    &__date, &__views, &__likes {
+        color: $silver;        
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        padding-right: .5rem;
+    }
+
+    &__hr {
+        background: $mercury;
+        border: none;
+        height: .12rem;
+        border-color: $mercury;
+    }
+
+}
