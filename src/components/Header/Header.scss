@@ -62,7 +62,9 @@
         justify-content: center;
         text-align: center;
         transition: .3s;
-        &:hover {}
+        &:hover {
+            background: $brainflix-darkblue;
+        }
     }
 
     &__upload-text {
