@@ -199,3 +199,44 @@ body {
     display: none!important;
 }
 
+// Button Styling
+.btn {
+    color: $white;
+    background: $brainflix-blue;
+    border: none;
+    outline: none;
+    display: flex;
+    font-weight: 600;
+    align-items: center;
+    padding: .05rem .5rem;
+    border-radius: .25rem;
+    position: relative;
+    max-width: 20rem;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    transition: .3s;
+    &:hover {
+        background: $brainflix-darkblue;
+
+    }
+    @include tablet {
+        min-width: 10.5rem;
+        max-width: 10.5rem;
+        min-height: 2.5rem;
+        max-height: 3rem;
+    }
+    
+    &__text {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        font-size: .875rem;
+        text-transform: uppercase;
+    }
+    
+    &__img {
+        position: absolute;
+        left: .5rem;
+    }
+}

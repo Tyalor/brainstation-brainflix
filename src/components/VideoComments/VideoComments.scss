@@ -1,0 +1,93 @@
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+// Comments
+.comments {
+    margin: 1rem;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    &__form {
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__form-container {
+        display: flex;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: .8rem;
+        margin-bottom: .5rem;
+        color: $silver;
+    }
+
+    &__counter {
+        margin: 0;
+        font-size: .85srem;
+        margin-bottom: .33rem;
+    }
+    
+    &__textarea {
+        // width: 100vw;
+        // max-width: 50%;
+        font-family: inherit;
+        padding: 1rem;
+        max-height: 7rem;
+        background: $albaster;
+        resize: none;
+        border: $mercury solid 0.125rem;
+        border-radius: .25rem;
+        margin-bottom: 1rem;
+        min-height: 6.5rem;
+        // min-width: 10rem;
+        // min-width: 3rem;
+        &::placeholder {
+            font-family: inherit;
+        }
+        @include tablet {
+            padding: .8rem;
+            min-height: 0rem;
+            max-height: 3rem;
+        }
+    }
+
+    &__img-container {
+        height: 2.25rem;
+        min-width: 2.25rem;
+        width: 100%;
+        max-width: 2.25rem;
+        margin: 2rem 1rem 1rem 0rem;
+        display: block;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: $mercury;
+        @include tablet {
+            height: 3rem;
+            min-width: 3rem;
+            width: 100%;
+            max-width: 3rem;
+            margin-right: 2rem;
+        }
+    }
+    
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 25% 100%;
+        // display: none;
+    }
+
+    &__submit-btn {
+        margin-left: 1.75rem;
+    }
+
+
+}

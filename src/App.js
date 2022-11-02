@@ -2,6 +2,7 @@ import './App.scss';
 import Header from "./components/Header/Header"
 import VideoPlayer from './components/VideoPlayer/VideoPlayer';
 import VideoDesc from './components/VideoDesc/VideoDesc';
+import VideoComments from './components/VideoComments/VideoComments';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <div>
         <VideoPlayer />
         <VideoDesc />
+        <VideoComments />
       </div>
     </>
   );
