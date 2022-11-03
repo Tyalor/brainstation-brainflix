@@ -10,4 +10,4 @@ const VideoPlayer = () => {
     )
 }
 
-export default VideoPlayer
+export { VideoPlayer }

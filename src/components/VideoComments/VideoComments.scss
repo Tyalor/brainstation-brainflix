@@ -86,8 +86,49 @@
     }
 
     &__submit-btn {
-        margin-left: 1.75rem;
+        @include tablet {
+            margin-left: 1.75rem;
+        }
     }
 
+    &__hr {
+        border: .02rem solid $mercury;
+    }
 
+    &__posts-container {
+        display: flex;
+    }
+    
+    &__text-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content-container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__copy {
+        margin: auto;
+        width: 100%;
+        display: block;
+    }
+    
+    &__meta {
+        display: flex;
+        margin: auto;
+        margin-bottom: -1.5rem;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    
+    &__user {
+        font-weight: 600;
+    }
+
+    &__date {
+        color: $silver;
+        font-weight: 600;
+    }
 }

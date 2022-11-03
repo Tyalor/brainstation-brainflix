@@ -23,13 +23,27 @@ const VideoComments = () => {
                         </form>
                     </div>
                 </div>
+            </div>
 
-                <div className="comments__posts">
-
+            <div className="comments__posts">
+                <hr className="comments__hr"/>
+                <div className="comments__posts-container">
+                    <div className="comments__img-container">
+                        <img className="comments__img" src={null} alt="" />
+                    </div>
+                    <div className="comments__copy">
+                        <div className="comments__meta">
+                            <p className="comments__user">Connor Walton</p>
+                            <h4 className="comments__date">2/17/2021</h4>
+                        </div>
+                        <div className="comments__text-container">
+                            <p className="comments__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati natus eum sed laborum tenetur! Sunt voluptates, delectus odio deserunt excepturi, quisquam cum eveniet itaque fugit exercitationem nisi veritatis minima! Iusto?</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
 
-export default VideoComments
+export { VideoComments }

@@ -22,4 +22,4 @@ const VideoDesc = () => {
     )
 }
 
-export default VideoDesc
+export { VideoDesc }

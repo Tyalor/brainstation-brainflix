@@ -1,0 +1,42 @@
+@use "../../styles/partials/_variables.scss" as *;
+@use "../../styles/partials/_mixins.scss" as *;
+
+.list {
+    &__container {
+        margin: 1rem;
+    }
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: .8rem;
+        margin-bottom: .5rem;
+        color: $silver;
+    }
+    &__item {
+        display: flex;
+        height: 100%;
+    }
+    &__copy {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    &__title, &__user {
+        font-size: .82rem;
+        line-height: 1.25rem;
+        margin: 0;
+        padding: 0;
+    }
+    &__title {margin-bottom: .45rem;}
+    &__img {
+        // width: 100%;
+        border-radius: .35rem;
+        height: 4rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__img-container {
+        display: flex;
+    }
+}

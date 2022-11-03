@@ -1,8 +1,9 @@
 import './App.scss';
-import Header from "./components/Header/Header"
-import VideoPlayer from './components/VideoPlayer/VideoPlayer';
-import VideoDesc from './components/VideoDesc/VideoDesc';
-import VideoComments from './components/VideoComments/VideoComments';
+import { Header } from "./components/Header/Header"
+import { VideoPlayer } from './components/VideoPlayer/VideoPlayer';
+import { VideoDesc } from './components/VideoDesc/VideoDesc';
+import { VideoComments } from './components/VideoComments/VideoComments';
+import { VideoList } from './components/VideoList/VideoList';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <VideoPlayer />
         <VideoDesc />
         <VideoComments />
+        <VideoList />
       </div>
     </>
   );
