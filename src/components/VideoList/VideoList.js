@@ -16,7 +16,7 @@ const VideoList = ({ activeVideo, videosData, clickHandler }) => {
                                 <img className="list__img" src={e.image} alt="" />
                             </div>
                             <div className="list__copy">
-                                <h4 className="list__title">{e.title}</h4>
+                                <h4 className="list__title text--bold">{e.title}</h4>
                                 <p className="list__user">{e.channel}</p>
                             </div>
                         </div>
