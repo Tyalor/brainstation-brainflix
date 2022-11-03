@@ -28,7 +28,7 @@ function App() {
       <div>
         <VideoPlayer />
         <VideoDesc activeVideo={activeVideo} />
-        <VideoComments videosDataDetails={videosDataDetails} />
+        <VideoComments activeVideo={activeVideo} />
         <VideoList activeVideo={activeVideo} videosData={videosData} clickHandler={clickHandler} />
       </div>
     </>

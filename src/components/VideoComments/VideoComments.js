@@ -3,13 +3,13 @@ import formImg from '../../assets/images/Mohan-muruge.jpg'
 import addComment from '../../assets/svgs/add_comment.svg'
 
 
-const VideoComments = ({ videosDataDetails }) => {
+const VideoComments = ({ activeVideo }) => {
     
-
+    console.log(activeVideo)
 
     return (
         <div className="comments">
-            <h4 className="comments__counter">3 Comments</h4>
+            <h4 className="comments__counter">? Comments</h4>
             <div className="comments__container">
                 <div className="comments__form-container">
                     {/* This could be a component for the profile pic */}
@@ -29,8 +29,7 @@ const VideoComments = ({ videosDataDetails }) => {
                 </div>
             </div>
 
-            {videosDataDetails.map((element) => {
-                console.log(element)
+            {activeVideo.comments.map(e => {
                 return (
                     <div className="comments__posts">
                         <hr className="comments__hr"/>
@@ -40,11 +39,11 @@ const VideoComments = ({ videosDataDetails }) => {
                             </div>
                             <div className="comments__copy">
                                 <div className="comments__meta">
-                                    <p className="comments__user">{element}</p>
-                                    <h4 className="comments__date">2/17/2021</h4>
+                                    <p className="comments__user">{e.name}</p>
+                                    <h4 className="comments__date">{e.timestamp}</h4>
                                 </div>
                                 <div className="comments__text-container">
-                                    <p className="comments__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati natus eum sed laborum tenetur! Sunt voluptates, delectus odio deserunt excepturi, quisquam cum eveniet itaque fugit exercitationem nisi veritatis minima! Iusto?</p>
+                                    <p className="comments__text">{e.comment}</p>
                                 </div>
                             </div>
                         </div>
