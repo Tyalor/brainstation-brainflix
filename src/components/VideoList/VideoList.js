@@ -1,9 +1,6 @@
 import './VideoList.scss';
-import pic from '../../assets/images/Mohan-muruge.jpg'
 
-const VideoList = (props) => {
-
-    let videosData = props.videosData
+const VideoList = ({ activeVideo, videosData, clickHandler }) => {
 
     return (
         <div className="list">
@@ -11,10 +8,10 @@ const VideoList = (props) => {
                 <h3 className="list__heading">Next Videos</h3>
                 <div className="list__item-container">
                 {
-
-                    videosData.map(e => {
-                        return (
-                        <div className="list__item" key={e.id}>
+                activeVideo ?    
+                    videosData.map(e => 
+                        activeVideo.id!== e.id ? 
+                        <div className="list__item" key={e.id} onClick={() => {clickHandler(e.id)}}>
                             <div className="list__img-container">
                                 <img className="list__img" src={e.image} alt="" />
                             </div>
@@ -23,8 +20,9 @@ const VideoList = (props) => {
                                 <p className="list__user">{e.channel}</p>
                             </div>
                         </div>
-                        )
-                    })
+                        : ''
+                    )
+                : ""
                 }
                     
                 </div>
