@@ -9,7 +9,7 @@ const VideoComments = ({ activeVideo }) => {
 
     return (
         <div className="comments">
-            <h4 className="comments__counter">? Comments</h4>
+            <h4 className="comments__counter">{activeVideo.comments.length} Comments</h4>
             <div className="comments__container">
                 <div className="comments__form-container">
                     {/* This could be a component for the profile pic */}
