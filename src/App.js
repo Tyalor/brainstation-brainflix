@@ -26,7 +26,7 @@ function App() {
     <>
       <Header />
       <div>
-        <VideoPlayer />
+        <VideoPlayer activeVideo={activeVideo}/>
         <VideoDesc activeVideo={activeVideo} />
         <VideoComments activeVideo={activeVideo} />
         <VideoList activeVideo={activeVideo} videosData={videosData} clickHandler={clickHandler} />

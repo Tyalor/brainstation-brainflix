@@ -1,10 +1,10 @@
 import './VideoPlayer.scss';
 
-const VideoPlayer = () => {
+const VideoPlayer = ({ activeVideo }) => {
     return (
         <div className="player">
             <div className="player__container">
-                <video className="player__video" src=""></video>
+                <video className="player__video" controls src="" poster={activeVideo.image}></video>
             </div>
         </div>
     )

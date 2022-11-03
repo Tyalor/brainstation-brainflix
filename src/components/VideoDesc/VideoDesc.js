@@ -1,6 +1,7 @@
 import './VideoDesc.scss'
 import views from '../../assets/svgs/views.svg'
 import likes from '../../assets/svgs/likes.svg'
+import { formatDate } from '../../scripts/formatDate'
 
 const VideoDesc = ({ activeVideo }) => {
     return (
@@ -10,7 +11,7 @@ const VideoDesc = ({ activeVideo }) => {
             <div className="desc__meta">
                 <div className="desc__meta-left">
                     <h4 className="desc__user">By {activeVideo.channel}</h4>
-                    <p className="desc__date">{activeVideo.timestamp}</p>
+                    <p className="desc__date">{formatDate(activeVideo.timestamp)}</p>
                 </div>
                 <div className="desc__meta-right">
                     <p className="desc__views"><img className="desc__icon" src={views} alt="views" />{activeVideo.views}</p>
