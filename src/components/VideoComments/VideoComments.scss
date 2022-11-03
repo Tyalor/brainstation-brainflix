@@ -30,7 +30,8 @@
 
     &__counter {
         margin: 0;
-        font-size: .85srem;
+        font-size: .9rem;
+        font-weight: 600;
         margin-bottom: .33rem;
     }
     
@@ -50,6 +51,7 @@
         // min-width: 3rem;
         &::placeholder {
             font-family: inherit;
+            color: $brainflix-darkblack;
         }
         @include tablet {
             padding: .8rem;
@@ -86,7 +88,9 @@
     }
 
     &__submit-btn {
+        margin-bottom: .8rem;
         @include tablet {
+            margin-bottom: 0rem;
             margin-left: 1.75rem;
         }
     }
@@ -104,6 +108,10 @@
         justify-content: space-between;
     }
 
+    &__text {
+        font-size: .8rem;
+    }
+
     &__content-container {
         display: flex;
         justify-content: space-between;
@@ -118,6 +126,7 @@
     &__meta {
         display: flex;
         margin: auto;
+        font-size: .9rem;
         margin-bottom: -1.5rem;
         align-items: baseline;
         justify-content: space-between;
@@ -129,6 +138,6 @@
 
     &__date {
         color: $silver;
-        font-weight: 600;
+        font-weight: 400;
     }
 }

@@ -7,6 +7,7 @@
     &__title {
         color: $brainflix-darkblack;
         font-weight: 600;
+        font-size: 1.8rem;
     }
 
     &__meta {
@@ -27,16 +28,24 @@
         margin-right: auto;
         flex-direction: column;
     }
+    
+    &__text {
+        font-size: .8rem;
+    }
 
     &__user {
         color: $brainflix-darkblack;
         font-weight: 600;
+        margin: .5rem 0;
+        font-size: .9rem;
     }
 
     &__date, &__views, &__likes {
+        margin: .5rem 0;
         color: $silver;        
         display: flex;
         align-items: center;
+        font-size: .9rem;
     }
 
     &__icon {
