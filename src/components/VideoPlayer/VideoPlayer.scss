@@ -4,14 +4,26 @@
 .player {
     height: 100%;
     background: black;
-
+    
     &__container {
         height: 100%;
         width: 100%;
     }
-
+    
     &__video {
         width: 100%;
-        // object-fit: contain;
+        display: flex;
+        margin: auto;
+        
+        // @include tablet {
+            max-height: 32rem;
+        // }
+        @include tablet {
+            max-width: 45rem;
+            max-height: 42rem;
+        }
+        @include desktop {
+            max-width: 65rem;
+        }
     }
 }

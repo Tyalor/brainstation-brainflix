@@ -1,5 +1,5 @@
 @use "../src/styles/partials/_global.scss" as *;
-
+@use "../src/styles/partials/mixins" as *;
 
 // import index.scss
 body {
@@ -60,3 +60,23 @@ code {
   }
 }
 
+// Video Styling
+.video {
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+    &__content-container {
+      display: flex;
+      margin: auto;
+    }
+    
+    &__content {
+      // display: flex;
+      // flex-direction: column;
+      // margin: auto;
+      // justify-content: center;
+      margin: 0;
+    }
+  }
+  
+}

@@ -2,8 +2,21 @@
 @use "../../styles/partials/_mixins.scss" as *;
 
 .list {
+
+    @include tablet {
+        padding: 1rem 2rem;
+    }
+
+    @include desktop {
+        border-left: $mercury solid 2px;
+    }
+    
     &__container {
         margin: 1rem;
+        @include tablet {
+            margin: auto;
+            max-width: 80rem;
+        }   
     }
     &__heading {
         text-transform: uppercase;

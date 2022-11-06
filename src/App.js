@@ -25,11 +25,15 @@ function App() {
   return (
     <>
       <Header />
-      <div>
+      <div className='video'>
         <VideoPlayer activeVideo={activeVideo}/>
-        <VideoDesc activeVideo={activeVideo} />
-        <VideoComments activeVideo={activeVideo} />
-        <VideoList activeVideo={activeVideo} videosData={videosData} clickHandler={clickHandler} />
+        <div className='video__content-container'>
+            <div className='video__content'>
+              <VideoDesc activeVideo={activeVideo} />
+              <VideoComments activeVideo={activeVideo} />
+            </div>
+          <VideoList activeVideo={activeVideo} videosData={videosData} clickHandler={clickHandler} />
+        </div>
       </div>
     </>
   );

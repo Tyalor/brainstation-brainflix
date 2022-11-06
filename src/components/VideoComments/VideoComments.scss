@@ -4,10 +4,20 @@
 // Comments
 .comments {
     margin: 1rem;
+    @include tablet {
+        margin: 1rem 2rem;
+    }
 
+    
     &__container {
+        @include tablet {
+            margin: auto;
+            max-width: 80rem;
+        }
+    }
+
+    &__sub-container {
         display: flex;
-        justify-content: center;
     }
     
     &__form {
@@ -106,6 +116,9 @@
 
     &__hr {
         border: .02rem solid $mercury;
+        @include desktop {
+            margin-right: -2rem;
+        }
     }
 
     &__posts-container {
