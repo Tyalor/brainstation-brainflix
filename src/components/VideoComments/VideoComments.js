@@ -1,7 +1,7 @@
 import './VideoComments.scss';
 import formImg from '../../assets/images/Mohan-muruge.jpg'
 import addComment from '../../assets/svgs/add_comment.svg'
-import { formatDate } from '../../scripts/formatDate'
+import { formatDateRelative } from '../../scripts/formatDate'
 
 const VideoComments = ({ activeVideo }) => {
     
@@ -43,7 +43,7 @@ const VideoComments = ({ activeVideo }) => {
                                     <div className="comments__copy">
                                         <div className="comments__meta">
                                             <p className="comments__user">{e.name}</p>
-                                            <h4 className="comments__date">{formatDate(e.timestamp)}</h4>
+                                            <h4 className="comments__date">{formatDateRelative(e.timestamp)}</h4>
                                         </div>
                                         <div className="comments__text-container">
                                             <p className="comments__text">{e.comment}</p>
