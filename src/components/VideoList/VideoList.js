@@ -1,6 +1,7 @@
+import { NavLink } from 'react-router-dom';
 import './VideoList.scss';
 
-const VideoList = ({ activeVideo, videosData, clickHandler }) => {
+const VideoList = ({ videoId, videosData, clickHandler }) => {
 
     return (
         <div className="list">
@@ -8,9 +9,11 @@ const VideoList = ({ activeVideo, videosData, clickHandler }) => {
                 <h3 className="list__heading">Next Videos</h3>
                 <div className="list__item-container">
                 {
-                activeVideo ?    
+                videosData ?    
                     videosData.map(e => 
-                        activeVideo.id!== e.id ? 
+                        videosData.id!== e.id ?
+                        <NavLink to={e.id}>
+
                         <div className="list__item" key={e.id} onClick={() => {clickHandler(e.id)}}>
                             <div className="list__img-container">
                                 <img className="list__img" src={e.image} alt="" />
@@ -20,6 +23,7 @@ const VideoList = ({ activeVideo, videosData, clickHandler }) => {
                                 <p className="list__user">{e.channel}</p>
                             </div>
                         </div>
+                        </NavLink>
                         : ''
                     )
                 : ""

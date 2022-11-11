@@ -11,8 +11,9 @@ function App() {
     <>
     <Router>
       <Header />
-
-
+        <Routes>
+          <Route path='/' element={<Video />}></Route>
+        </Routes>
     </Router>
     </>
   );
