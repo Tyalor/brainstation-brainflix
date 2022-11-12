@@ -3,14 +3,11 @@ import formImg from '../../assets/images/Mohan-muruge.jpg'
 import addComment from '../../assets/svgs/add_comment.svg'
 import { formatDateRelative } from '../../scripts/formatDate'
 
-const VideoComments = ({ videoData }) => {
-    
-    // console.log(activeVideo)
-
+const VideoComments = ({ videosDetailedData }) => {
     return (
-        <div className="comments">
+        <div key={videosDetailedData.id} className="comments">
             <div className='comments__container'>
-                <h4 className="comments__counter">{videoData.comments.length} Comments</h4>
+                <h4 className="comments__counter">{videosDetailedData.comments?.length} Comments</h4>
                 <div className="comments__sub-container">
                     <div className="comments__form-container">
                         {/* This could be a component for the profile pic */}
@@ -31,8 +28,8 @@ const VideoComments = ({ videoData }) => {
 
                     </div>
                 </div>
-
-                    {videoData.comments.map(e => {
+                    {videosDetailedData.comments?.map(e => {
+                        // console.log(videosDetailedData)
                         return (
                             <div className="comments__posts">
                                 <hr className="comments__hr"/>

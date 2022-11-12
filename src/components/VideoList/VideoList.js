@@ -1,7 +1,19 @@
-import { NavLink } from 'react-router-dom';
 import './VideoList.scss';
+import axios from 'axios';
+import { NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { API_URL, API_KEY } from '../../utils/apis';
 
-const VideoList = ({ videoId, videosData, clickHandler }) => {
+const VideoList = ({ clickHandler }) => {
+
+    const [videosData, setVideoData] = useState([])
+
+    useEffect(() => {
+      axios.get(`${API_URL}/videos/?api_key=${API_KEY}`)
+      .then(res => {
+        setVideoData(res.data)
+      })
+    }, [])  
 
     return (
         <div className="list">
@@ -9,11 +21,10 @@ const VideoList = ({ videoId, videosData, clickHandler }) => {
                 <h3 className="list__heading">Next Videos</h3>
                 <div className="list__item-container">
                 {
-                videosData ?    
+                // videosData?.map &&    
                     videosData.map(e => 
-                        videosData.id!== e.id ?
-                        <NavLink to={e.id}>
-
+                        // videosData.id !== e.id ?
+                        <NavLink to={`/videos/${e.id}`} key={e.id}>
                         <div className="list__item" key={e.id} onClick={() => {clickHandler(e.id)}}>
                             <div className="list__img-container">
                                 <img className="list__img" src={e.image} alt="" />
@@ -24,11 +35,9 @@ const VideoList = ({ videoId, videosData, clickHandler }) => {
                             </div>
                         </div>
                         </NavLink>
-                        : ''
+                        // : ''
                     )
-                : ""
-                }
-                    
+                }   
                 </div>
             </div>
         </div>

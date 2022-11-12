@@ -48,8 +48,6 @@
     }
     
     &__textarea {
-        // width: 100vw;
-        // max-width: 50%;
         font-family: inherit;
         padding: 1rem;
         max-height: 7rem;
@@ -62,7 +60,6 @@
         min-width: 15rem;
         width: 100%;
         max-width: 100%;
-        // min-width: 3rem;
         &::placeholder {
             font-family: inherit;
             color: $brainflix-darkblack;
