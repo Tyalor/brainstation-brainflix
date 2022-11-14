@@ -7,8 +7,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    // background: red;
     padding-bottom: 1rem;
+    border-bottom: $silver solid .1rem;
 
     @include tablet {
         padding-bottom: 0rem;
@@ -22,7 +22,6 @@
             height: 100%;
             max-width: 80rem;
             align-items: center;
-            // align-items: center;
             justify-content: space-between;
         }
     }
@@ -45,7 +44,6 @@
         position: relative;
         align-items: center;
         margin-bottom: 1rem;
-        
         @include tablet {
             margin-bottom: 0;
             width: 100%;

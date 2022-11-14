@@ -4,12 +4,16 @@
 .upload {
     &__container {
         margin: 1rem;
+        margin: auto;
+        padding: 1rem;
+        max-width: 80rem;
     }
 
     &__item-container {
         display: flex;
         // justify-content: space-between;
         align-items: baseline;
+        flex-direction: column;
         @include desktop {
             flex-direction: row;
         }
@@ -40,7 +44,9 @@
         object-fit: cover;
         border-radius: .25rem;
         object-position: 25% 100%;
-        max-width: 400px;
+        @include tablet {
+            max-width: 400px;
+        }
         // display: none;
     }
 
@@ -52,11 +58,15 @@
 
     &__form {
         width: 100%;
+        @include desktop {
+            margin-left: 1rem;
+        }
     }
 
     &__input {
         font-family: inherit;
         padding: 1rem;
+        margin-top: 1rem;
         max-height: 7rem;
         background: $albaster;
         resize: none;
@@ -64,7 +74,7 @@
         border-radius: .25rem;
         margin-bottom: 1rem;
         // min-height: 6.5rem;
-        min-width: 15rem;
+        // min-width: 15rem;
         width: 100%;
         max-width: 100%;
         &::placeholder {
@@ -86,7 +96,7 @@
         border: $mercury solid 0.125rem;
         border-radius: .25rem;
         margin-bottom: 1rem;
-        min-height: 6.5rem;
+        min-height: 5.75rem;
         min-width: 15rem;
         width: 100%;
         max-width: 100%;
@@ -107,11 +117,26 @@
     &__btn-container {
         display: flex;
         justify-content: right;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
     }
     
     &__cancel-btn {
         color: $brainflix-blue;
         background-color: $white;
+        max-width: unset;
+        @include tablet {
+            max-width: 20rem;
+        }
+    }
+
+    &__publish-btn {
+        max-width: unset;
+        @include tablet {
+            max-width: 20rem;
+        }
     }
 
 }
