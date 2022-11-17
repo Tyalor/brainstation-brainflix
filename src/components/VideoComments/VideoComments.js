@@ -1,22 +1,9 @@
 import './VideoComments.scss';
-// import { useEffect } from 'react';
 import formImg from '../../assets/images/Mohan-muruge.jpg'
 import addComment from '../../assets/svgs/add_comment.svg'
 import { formatDateRelative } from '../../scripts/formatDate'
-// import axios from 'axios';
-// import { API_URL, API_KEY } from '../../utils/apis';
 
 const VideoComments = ({ videosDetailedData }) => {
-
-    // comment = {}
-    // console.log(videosDetailedData.id)
-    // const clickHandler = () => {
-    //     axios.put(`${API_URL}/videos/b6f35f03-7936-409b-bd2a-446bcc5f30e7/?api_key=${API_KEY}`, {
-    //         "name": "Nigel",
-    //         "comment": "This is a test"
-    //     })
-    //     .then(res => console.log(res.data))
-    // }
 
     return (
         <div key={videosDetailedData.id} className="comments">
@@ -25,7 +12,7 @@ const VideoComments = ({ videosDetailedData }) => {
                 <div className="comments__sub-container">
                     <div className="comments__form-container">
                         <div className="comments__img-container">
-                            <img className="comments__img" src={formImg} alt="" />
+                            <img className="comments__img" src={formImg} alt="comment" />
                         </div>
                         
                         <div className="comments__textarea-container">
@@ -48,7 +35,7 @@ const VideoComments = ({ videosDetailedData }) => {
                                 <hr className="comments__hr"/>
                                 <div className="comments__posts-container">
                                     <div className="comments__img-container">
-                                        <img className="comments__img" src={null} alt="" />
+                                        <img className="comments__img" src={null} alt="comment" />
                                     </div>
                                     <div className="comments__copy">
                                         <div className="comments__meta">

@@ -26,7 +26,7 @@ const VideoList = ({ videoId }) => {
                         <NavLink to={`/videos/${e.id}`} key={e.id}>
                         <div className="list__item" key={e.id}>
                             <div className="list__img-container">
-                                <img className="list__img" src={e.image} alt="" />
+                                <img className="list__img" src={e.image} alt="video-list" />
                             </div>
                             <div className="list__copy">
                                 <h4 className="list__title text--bold">{e.title}</h4>

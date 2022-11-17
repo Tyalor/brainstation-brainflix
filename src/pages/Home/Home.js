@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { API_URL, API_KEY } from '../../utils/APIs';
+import { API_URL } from '../../utils/APIs';
 import { useParams } from 'react-router-dom';
 import { VideoPlayer } from "../../components/VideoPlayer/VideoPlayer";
 import { VideoDesc } from '../../components/VideoDesc/VideoDesc';
