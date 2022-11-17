@@ -9,7 +9,6 @@ import { VideoList } from '../../components/VideoList/VideoList';
 
 const Video = () => {
     
-    const [videosData, setVideoData] = useState([])
     const [videosDetailedData, setVideoDetailedData] = useState([])
     const {videoId} = useParams()
     
@@ -21,11 +20,6 @@ const Video = () => {
     }, [videoId])
 
 
-    const clickHandler = (id) => {
-      let newActiveVideo = videosData.filter(video => video.id === id)
-      setVideoData(newActiveVideo)
-    }
-
     return (        
     <div className='video'>
         <VideoPlayer videosDetailedData={videosDetailedData}/>
@@ -34,7 +28,7 @@ const Video = () => {
             <VideoDesc videosDetailedData={videosDetailedData} />
             <VideoComments key={videoId} videosDetailedData={videosDetailedData} setVideoDetailedData={setVideoDetailedData}/>
           </div>
-            <VideoList clickHandler={clickHandler} />
+            <VideoList videoId={videoId}/>
       </div>
     </div>
     )
