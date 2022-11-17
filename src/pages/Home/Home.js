@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { API_URL, API_KEY } from '../../utils/apis';
+import { API_URL, API_KEY } from '../../utils/APIs';
 import { useParams } from 'react-router-dom';
 import { VideoPlayer } from "../../components/VideoPlayer/VideoPlayer";
 import { VideoDesc } from '../../components/VideoDesc/VideoDesc';
@@ -15,7 +15,7 @@ const Home = () => {
    
     useEffect(() => {
       // Find a more elegant way to return to 0 index of videoId
-      axios.get(`${API_URL}/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=${API_KEY}`)
+      axios.get(`${API_URL}/videos/84e96018-4022-434e-80bf-000ce4cd12b8/`)
       .then(res => {
         setVideoDetailedData(res.data)
       })

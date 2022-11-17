@@ -2,14 +2,14 @@ import './VideoList.scss';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { API_URL, API_KEY } from '../../utils/apis';
+import { API_URL } from '../../utils/APIs';
 
 const VideoList = ({ clickHandler }) => {
 
     const [videosData, setVideoData] = useState([])
 
     useEffect(() => {
-      axios.get(`${API_URL}/videos/?api_key=${API_KEY}`)
+      axios.get(`${API_URL}/videos`)
       .then(res => {
         setVideoData(res.data)
       })
