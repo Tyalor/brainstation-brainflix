@@ -28,7 +28,7 @@ const Header = () => {
                             </button>
                         </NavLink>
                         <div className="header__profile-img-container d-tablet">
-                            <img className="header__profile-img" src={userPicture} alt="" />
+                            <img className="header__profile-img" src={userPicture} alt="user-profile" />
                         </div>
                     </div>                    
                 </nav>

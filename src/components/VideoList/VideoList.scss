@@ -15,7 +15,8 @@
         margin: 1rem;
         @include tablet {
             margin: auto;
-            max-width: 80rem;
+            // max-width: 80rem;
+            max-width: 46rem;
         }   
     }
     &__heading {
